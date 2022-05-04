@@ -1,6 +1,6 @@
 # Color
 
-Color package for Hare (harelang.org) like [chalk.js](https://github.com/chalk/chalk) or [Go Colors] to color your terminal output using ASCI escape codes.
+Color package for Hare (harelang.org) like [chalk.js](https://github.com/chalk/chalk) or [Go Colors](https://github.com/fatih/color) to color your terminal output using ASCI escape codes.
 
 ```ha
 use fmt;
