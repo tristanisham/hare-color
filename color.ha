@@ -2,6 +2,10 @@
 // (c) 2022 Tristan Isham <tristan@isham.co>
 use strings;
 
+// Color package for Hare (harelang.org) like [chalk.js](https://github.com/chalk/chalk) or 
+// [Go Colors](https://github.com/fatih/color) to color your terminal output using ASCI escape codes.
+
+
 type foreground = enum {
     BLACK,
     DARKRED,
@@ -115,128 +119,172 @@ fn foreground_code(f: foreground) str = {
 
 // Foreground
 
+// Returns the concatonated arguments colored green.
 export fn green(f: str...) str = {
     return write(foreground::DARKGREEN, f...);
 };
+
+// Returns the concatonated arguments colored black.
 export fn black(f: str...) str = {
     return write(foreground::BLACK, f...);
 };
 
+// Returns the concatonated arguments colored red.
 export fn red(f: str...) str = {
     return write(foreground::DARKRED, f...);
 };
+
+// Returns the concatonated arguments colored yellow.
 export fn yellow(f: str...) str = {
     return write(foreground::DARKYELLOW, f...);
 };
+
+// Returns the concatonated arguments colored blue.
 export fn blue(f: str...) str = {
     return write(foreground::DARKBLUE, f...);
 };
+
+// Returns the concatonated arguments colored magenta.
 export fn magenta(f: str...) str = {
     return write(foreground::DARKMAGENTA, f...);
 };
+
+// Returns the concatonated arguments colored cyan.
 export fn cyan(f: str...) str = {
     return write(foreground::DARKCYAN, f...);
 };
+
+// Returns the concatonated arguments colored gray.
 export fn gray(f: str...) str = {
     return write(foreground::DARKGRAY, f...);
 };
 
+// Returns the concatonated arguments colored light gray.
 export fn lightgray(f: str...) str = {
     return write(foreground::LIGHTGRAY, f...);
 };
+
+// Returns the concatonated arguments colored light green.
 export fn lightgreen(f: str...) str = {
     return write(foreground::LIGHTGREEN, f...);
 };
 
+// Returns the concatonated arguments colored light yellow.
 export fn lightyellow(f: str...) str = {
     return write(foreground::LIGHTYELLOW, f...);
 };
+
+// Returns the concatonated arguments colored light blue.
 export fn lightblue(f: str...) str = {
     return write(foreground::LIGHTBLUE, f...);
 };
+
+// Returns the concatonated arguments colored light magenta.
 export fn lightmagenta(f: str...) str = {
     return write(foreground::LIGHTMAGENTA, f...);
 };
 
+// Returns the concatonated arguments colored light cyan.
 export fn lightcyan(f: str...) str = {
     return write(foreground::LIGHTCYAN, f...);
 };
 
+// Returns the concatonated arguments colored white.
 export fn white(f: str...) str = {
     return write(foreground::WHITE, f...);
 };
 
 // Background
+
+// Returns the concatonated arguments on a black background.
 export fn bg_black(f: str...) str = {
     return write(background::BLACK, f...);
 };
 
+// Returns the concatonated arguments on a red background.
 export fn bg_red(f: str...) str = {
     return write(background::DARKRED, f...);
 };
 
+// Returns the concatonated arguments on a green background.
 export fn bg_green(f: str...) str = {
     return write(background::DARKGREEN, f...);
 };
 
+// Returns the concatonated arguments on a yellow background.
 export fn bg_yellow(f: str...) str = {
     return write(background::DARKYELLOW, f...);
 };
 
+// Returns the concatonated arguments on a blue background.
 export fn bg_blue(f: str...) str = {
     return write(background::DARKBLUE, f...);
 };
 
+// Returns the concatonated arguments on a cyan background.
 export fn bg_cyan(f: str...) str = {
     return write(background::DARKCYAN, f...);
 };
 
+// Returns the concatonated arguments on a light gray background.
 export fn bg_lightgray(f: str...) str = {
     return write(background::LIGHTGRAY, f...);
 };
 
+// Returns the concatonated arguments on a light red background.
 export fn bg_lightred(f: str...) str = {
     return write(background::LIGHTRED, f...);
 };
 
+// Returns the concatonated arguments on a light green background.
 export fn bg_lightgreen(f: str...) str = {
     return write(background::LIGHTGREEN, f...);
 };
 
+// Returns the concatonated arguments on a light yellow background.
 export fn bg_lightyellow(f: str...) str = {
     return write(background::LIGHTYELLOW, f...);
 };
 
+// Returns the concatonated arguments on a light blue background.
 export fn bg_lightblue(f: str...) str = {
     return write(background::LIGHTBLUE, f...);
 };
 
+// Returns the concatonated arguments on a light magenta background.
 export fn bg_lightmagenta(f: str...) str = {
     return write(background::LIGHTMAGENTA, f...);
 };
 
+// Returns the concatonated arguments on a light cyan background.
 export fn bg_lightcyan(f: str...) str = {
     return write(background::LIGHTCYAN, f...);
 };
 
 // FORMAT
 
+// Returns the concatonated arguments emboldened.
 export fn bold(f: str...) str = {
     return write(format::BOLD, f...);
 };
 
+// Returns the concatonated arguments underlined.
 export fn underline(f: str...) str = {
     return write(format::UNDERLINE, f...);
 };
 
+// Returns the concatonated arguments with no underline.
 export fn no_underline(f: str...) str = {
     return write(format::NOUNDERLINE, f...);
 };
 
+// Returns the concatonated arguments reversed.
+// "abcd" -> "dcba"`
 export fn reverse(f: str...) str = {
     return write(format::REVERSETEXT, f...);
 };
 
+// Returns the concatonated arguments facing forward.
 export fn forward(f: str...) str = {
     return write(format::POSITIVETEXT, f...);
 };
