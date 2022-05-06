@@ -7,10 +7,7 @@ use fmt;
 use color;
 
 export fn main() void = {
-    let fg = color::underline("Hello, world!");
-    let fg = color::red(fg);
-    fmt::println(fg)!;
-    free(fg);
+    fmt::println!(color::underline(color::red("Hello, world!)))!;
 };
 
 ```
